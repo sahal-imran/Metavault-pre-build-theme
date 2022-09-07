@@ -25,6 +25,7 @@ function TransparentRevenues() {
           pb: 6,
         }}
       >
+        {/* right */}
         <Box
           id="TransparentRevenuesLeftBG"
           sx={{
@@ -95,6 +96,7 @@ function TransparentRevenues() {
             </Typography>
           </Box>
         </Box>
+        {/* left */}
         <Box
           sx={{
             width: { md: "50%", xs: "100%" },

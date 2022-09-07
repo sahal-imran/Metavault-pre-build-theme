@@ -19,3 +19,9 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#InvestAndGovernBg{
+  background-image: url("/svg/Invest.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}

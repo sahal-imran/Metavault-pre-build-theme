@@ -25,8 +25,8 @@ function Hero() {
           justifyContent: "center",
           alignItems: "center",
           height: { md: "100vh" },
-          pt: { md: 16, xs: 16 },
-          pb: { md: "unset", xs: 16 },
+          pt: { md: 16, xs: 10 },
+          pb: { md: "unset", xs: 12 },
         }}
       >
         <Typography
