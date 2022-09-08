@@ -130,6 +130,7 @@ function Community() {
                 color: "white",
                 textAlign: { lg: "left", xs: "center" },
                 mt: 3,
+                pb:6
               }}
             >
               © 2022 Metavault

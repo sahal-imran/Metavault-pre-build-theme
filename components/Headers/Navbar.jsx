@@ -12,6 +12,7 @@ import "react-modern-drawer/dist/index.css";
 import Button from "@mui/material/Button";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 
 function Navbar() {
   // States
@@ -30,7 +31,7 @@ function Navbar() {
           background: "rgba(0,0,0,0.4)",
           backdropFilter: "blur(5px)",
           position: "fixed",
-          zIndex:100
+          zIndex: 100,
         }}
       >
         <Container
@@ -258,6 +259,7 @@ function Navbar() {
               textDecoration: "none",
               mt: 5,
               borderBottom: "1px solid white ",
+              pb: 2,
             }}
           >
             <RocketLaunchIcon
@@ -290,6 +292,7 @@ function Navbar() {
               textDecoration: "none",
               mt: 5,
               borderBottom: "1px solid white ",
+              pb: 2,
             }}
           >
             <FileCopyIcon sx={{ color: "white", fontSize: "28px", mr: 2 }} />
@@ -322,9 +325,12 @@ function Navbar() {
               mt: 5,
               borderBottom: "1px solid white ",
               mb: 6,
+              pb: 2,
             }}
           >
-            <FileCopyIcon sx={{ color: "white", fontSize: "28px", mr: 2 }} />
+            <CurrencyExchangeIcon
+              sx={{ color: "white", fontSize: "28px", mr: 2 }}
+            />
             <Typography
               sx={{
                 color: "white",
@@ -399,8 +405,8 @@ function Navbar() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              position:'absolute',
-              bottom:'4rem',
+              position: "absolute",
+              bottom: "4rem",
             }}
           >
             <AnchorLink
@@ -434,7 +440,7 @@ function Navbar() {
               />
             </AnchorLink>
             <AnchorLink
-              sx={{ mr:3.8, cursor: "pointer", width: "30px", height: "30px" }}
+              sx={{ mr: 3.8, cursor: "pointer", width: "30px", height: "30px" }}
             >
               <Image
                 src={"/svg/Github.svg"}
