@@ -82,10 +82,10 @@ function Deposit() {
                         >
                           <Typography
                             sx={{
-                              textAlign: "center",
+                              textAlign: "left",
                               fontFamily: "Inter",
                               lineHeight: "26px",
-                              fontSize: "35px",
+                              fontSize: {md:"35px", xs:'30px'},
                               fontWeight: 600,
                               color: "white",
                             }}

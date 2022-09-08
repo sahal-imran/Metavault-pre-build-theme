@@ -25,7 +25,7 @@ function Hero() {
           justifyContent: "center",
           alignItems: "center",
           height: { md: "100vh" },
-          pt: { md: 16, xs: 3 },
+          pt: { md: 16, xs: 8.5  },
           pb: { md: "unset", xs: 12 },
         }}
       >
@@ -36,7 +36,7 @@ function Hero() {
             textAlign: "center",
             lineHeight: { md: "4.2rem", xs: "3rem" },
             mt: { md: "-54px", xs: "5.5rem" },
-            fontSize: { md: "3.8rem", xs: "2rem" },
+            fontSize: { md: "3.8rem", xs: "1.8rem" },
             fontWeight: 700,
             color: "rgb(255, 170, 39)",
           }}
@@ -49,7 +49,7 @@ function Hero() {
             mt: 3,
             textAlign: "center",
             fontFamily: "Inter",
-            lineHeight: "2rem",
+            lineHeight: {md:"2rem", xs:'1.5rem'},
             fontSize: {md:"1.2rem", xs:'15px'},
             fontWeight: 500,
             color: "white",
