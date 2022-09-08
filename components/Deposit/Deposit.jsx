@@ -4,6 +4,7 @@ import { Box, Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import AnchorLink from "@mui/material/Link";
+import { Zoom } from "react-reveal";
 
 function Deposit() {
   return (
@@ -13,8 +14,8 @@ function Deposit() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        minHeight:'100vh',
-        py:{md:0,xs:8}
+        minHeight: "100vh",
+        py: { md: 0, xs: 8 },
       }}
     >
       <Container
@@ -45,7 +46,7 @@ function Deposit() {
               mb: { md: 0, xs: 4 },
             }}
           >
-            <Box sx={{ flexGrow: 1, width: "100%"}}>
+            <Box sx={{ flexGrow: 1, width: "100%" }}>
               <Grid
                 container
                 columnSpacing={{ md: 0, xs: 0 }}
@@ -67,51 +68,53 @@ function Deposit() {
                           p: 3,
                         }}
                       >
-                        <Image
-                          src={item.icon}
-                          width={105}
-                          height={105}
-                          objectFit="contain"
-                        />
-                        <Box
-                          sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            ml: 2,
-                          }}
-                        >
-                          <Typography
-                            sx={{
-                              textAlign: "left",
-                              fontFamily: "Inter",
-                              lineHeight: "26px",
-                              fontSize: {md:"35px", xs:'30px'},
-                              fontWeight: 600,
-                              color: "white",
-                            }}
-                          >
-                            {item.title}
-                          </Typography>
-                          <AnchorLink
+                        <Zoom cascade>
+                          <Image
+                            src={item.icon}
+                            width={105}
+                            height={105}
+                            objectFit="contain"
+                          />
+                          <Box
                             sx={{
                               display: "flex",
-                              justifyContent: "start",
-                              alignItems: "center",
-                              textDecoration: "none",
-                              color: "white",
-                              mt: 2,
-                              cursor: "pointer",
+                              flexDirection: "column",
+                              ml: 2,
                             }}
                           >
-                            See more
-                            <Image
-                              src="/svg/SeeMore.svg"
-                              width={24}
-                              height={24}
-                              objectFit="contain"
-                            ></Image>
-                          </AnchorLink>
-                        </Box>
+                            <Typography
+                              sx={{
+                                textAlign: "left",
+                                fontFamily: "Inter",
+                                lineHeight: "26px",
+                                fontSize: { md: "35px", xs: "30px" },
+                                fontWeight: 600,
+                                color: "white",
+                              }}
+                            >
+                              {item.title}
+                            </Typography>
+                            <AnchorLink
+                              sx={{
+                                display: "flex",
+                                justifyContent: "start",
+                                alignItems: "center",
+                                textDecoration: "none",
+                                color: "white",
+                                mt: 2,
+                                cursor: "pointer",
+                              }}
+                            >
+                              See more
+                              <Image
+                                src="/svg/SeeMore.svg"
+                                width={24}
+                                height={24}
+                                objectFit="contain"
+                              ></Image>
+                            </AnchorLink>
+                          </Box>
+                        </Zoom>
                       </Box>
                     </Grid>
                   );
@@ -144,6 +147,7 @@ function Deposit() {
                 objectFit="contain"
               ></Image>
             </Box>
+            <Zoom cascade >
             <Box
               sx={{
                 width: "100%",
@@ -197,6 +201,7 @@ function Deposit() {
                 ></Image>
               </Box>
             </Box>
+            </Zoom>
           </Box>
         </Box>
       </Container>

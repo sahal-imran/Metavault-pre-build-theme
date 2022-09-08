@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { Button } from "@mui/material";
 import { Link } from "react-scroll";
+import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 function Blog() {
   return (
@@ -38,53 +40,55 @@ function Blog() {
               {Blog_Data.map((item, index) => {
                 return (
                   <Grid key={index} item md={4} sm={6} xs={12}>
-                    <Box
-                      sx={{
-                        width: "100%",
-                        minHeight: "470px",
-                        display: "flex",
-                        justifyContent: { md: "start", xs: "center" },
-                        alignItems: { md: "start", xs: "center" },
-                        flexDirection: "column",
-                        borderRight: "1px solid rgb(31,31,34)",
-                        borderLeft: "1px solid rgb(31,31,34)",
-                        p: 4,
-                      }}
-                    >
-                      <Image
-                        src={item.icon}
-                        width={84}
-                        height={84}
-                        objectFit="contain"
-                      />
-                      <Typography
+                    <Zoom cascade>
+                      <Box
                         sx={{
-                          fontFamily: "Inter",
-                          lineHeight: { md: "26px", xs: "30px" },
-                          fontSize: { md: "25px", xs: "22px" },
-                          fontWeight: 600,
-                          color: "white",
-                          textAlign: { md: "unset", xs: "center" },
-                          mt: 3,
-                          mb: 2,
+                          width: "100%",
+                          minHeight: "470px",
+                          display: "flex",
+                          justifyContent: { md: "start", xs: "center" },
+                          alignItems: { md: "start", xs: "center" },
+                          flexDirection: "column",
+                          borderRight: "1px solid rgb(31,31,34)",
+                          borderLeft: "1px solid rgb(31,31,34)",
+                          p: 4,
                         }}
                       >
-                        {item.title}
-                      </Typography>
-                      <Typography
-                        sx={{
-                          textAlign: "center",
-                          fontFamily: "Inter",
-                          lineHeight: "28px",
-                          fontSize: "16px",
-                          fontWeight: 400,
-                          textAlign: { md: "left", xs: "center" },
-                          color: "white",
-                        }}
-                      >
-                        {item.des}
-                      </Typography>
-                    </Box>
+                        <Image
+                          src={item.icon}
+                          width={84}
+                          height={84}
+                          objectFit="contain"
+                        />
+                        <Typography
+                          sx={{
+                            fontFamily: "Inter",
+                            lineHeight: { md: "26px", xs: "30px" },
+                            fontSize: { md: "25px", xs: "22px" },
+                            fontWeight: 600,
+                            color: "white",
+                            textAlign: { md: "unset", xs: "center" },
+                            mt: 3,
+                            mb: 2,
+                          }}
+                        >
+                          {item.title}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            textAlign: "center",
+                            fontFamily: "Inter",
+                            lineHeight: "28px",
+                            fontSize: "16px",
+                            fontWeight: 400,
+                            textAlign: { md: "left", xs: "center" },
+                            color: "white",
+                          }}
+                        >
+                          {item.des}
+                        </Typography>
+                      </Box>
+                    </Zoom>
                   </Grid>
                 );
               })}
@@ -114,38 +118,44 @@ function Blog() {
                       px: 5,
                     }}
                   >
-                    <Typography
-                      sx={{
-                        fontFamily: "Inter",
-                        lineHeight: "45.99px",
-                        fontSize: { md: "2.7rem", sm: "2.2rem", xs: "1.8rem" },
-                        fontWeight: 600,
-                        color: "white",
-                      }}
-                    >
-                      Join the Metavault DAO
-                    </Typography>
-                    <Button
-                      variant="contained"
-                      sx={{
-                        width: { md: "100%", xs: "100%" },
-                        paddingY: { md: "1.4rem", xs: "1.3rem" },
-                        background: "#FFAA27",
-                        color: "black",
-                        borderRadius: ".8rem",
-                        fontFamily: "Inter",
-                        textTransform: "capitalize",
-                        fontWeight: 600,
-                        fontSize: { md: "1.5rem", xs: "1.2rem" },
-                        mt: 4,
-                        whiteSpace: "noWrap",
-                        "&:hover": {
-                          backgroundColor: "#FFAA27",
-                        },
-                      }}
-                    >
-                      Enter App
-                    </Button>
+                    <Zoom cascade>
+                      <Typography
+                        sx={{
+                          fontFamily: "Inter",
+                          lineHeight: "45.99px",
+                          fontSize: {
+                            md: "2.7rem",
+                            sm: "2.2rem",
+                            xs: "1.8rem",
+                          },
+                          fontWeight: 600,
+                          color: "white",
+                        }}
+                      >
+                        Join the Metavault DAO
+                      </Typography>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          width: '300px',
+                          paddingY: { md: "1.4rem", xs: "1.3rem" },
+                          background: "#FFAA27",
+                          color: "black",
+                          borderRadius: ".8rem",
+                          fontFamily: "Inter",
+                          textTransform: "capitalize",
+                          fontWeight: 600,
+                          fontSize: { md: "1.5rem", xs: "1.2rem" },
+                          mt: 4,
+                          whiteSpace: "noWrap",
+                          "&:hover": {
+                            backgroundColor: "#FFAA27",
+                          },
+                        }}
+                      >
+                        Enter App
+                      </Button>
+                    </Zoom>
                   </Box>
                   {/* Right Box */}
                   <Box
@@ -164,11 +174,13 @@ function Blog() {
                         height: "100%",
                       }}
                     >
-                      <Image
-                        src={"/Png/BlogDesktop.png"}
-                        layout="fill"
-                        objectFit="fill"
-                      ></Image>
+                      <Fade right cascade>
+                        <Image
+                          src={"/Png/BlogDesktop.png"}
+                          layout="fill"
+                          objectFit="fill"
+                        ></Image>
+                      </Fade>
                     </Box>
                   </Box>
                 </Box>
@@ -181,53 +193,59 @@ function Blog() {
                     pl: { md: 4.5, xs: 0 },
                   }}
                 >
-                  <Link
-                    activeClass="active"
-                    to=""
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                  >
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        fontFamily: "Inter",
-                        fontSize: { md: "2.2rem", sm: "1.3rem", xs: "1.7rem" },
-
-                        lineHeight: "26px",
-                        color: "white",
-                        fontWeight: 600,
-                        display: "flex",
-                        justifyContent: { md: "start", xs: "center" },
-                        alignItems: "center",
-                        cursor: "pointer",
-                        pt: { md: 9, xs: 4 },
-                      }}
+                  <Zoom cascade>
+                    <Link
+                      activeClass="active"
+                      to=""
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
                     >
-                      Metavault DAO
-                    </Typography>
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        fontFamily: "Inter",
-                        fontSize: "16px",
-                        lineHeight: "26px",
-                        color: "hsla(0,0%,100%,.7)",
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          fontFamily: "Inter",
+                          fontSize: {
+                            md: "2.2rem",
+                            sm: "1.3rem",
+                            xs: "1.7rem",
+                          },
 
-                        fontWeight: 400,
-                        display: "flex",
-                        justifyContent: {
-                          md: "start",
-                          sm: "center",
-                          xs: "center",
-                        },
-                        alignItems: "center",
-                        mt: { md: 1, xs: 0 },
-                      }}
-                    >
-                      you are here
-                    </Typography>
-                  </Link>
+                          lineHeight: "26px",
+                          color: "white",
+                          fontWeight: 600,
+                          display: "flex",
+                          justifyContent: { md: "start", xs: "center" },
+                          alignItems: "center",
+                          cursor: "pointer",
+                          pt: { md: 9, xs: 4 },
+                        }}
+                      >
+                        Metavault DAO
+                      </Typography>
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          fontFamily: "Inter",
+                          fontSize: "16px",
+                          lineHeight: "26px",
+                          color: "hsla(0,0%,100%,.7)",
+
+                          fontWeight: 400,
+                          display: "flex",
+                          justifyContent: {
+                            md: "start",
+                            sm: "center",
+                            xs: "center",
+                          },
+                          alignItems: "center",
+                          mt: { md: 1, xs: 0 },
+                        }}
+                      >
+                        you are here
+                      </Typography>
+                    </Link>
+                  </Zoom>
                 </Box>
               </Grid>
               <Grid item sm={4} xs={12}>
@@ -237,31 +255,37 @@ function Blog() {
                     pl: { md: 4.5, xs: 0 },
                   }}
                 >
-                  <Link
-                    activeClass="active"
-                    to=""
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                  >
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        fontFamily: "Inter",
-                        fontSize: { md: "2.2rem", sm: "1.3rem", xs: "1.7rem" },
-                        lineHeight: "26px",
-                        color: "white",
-                        fontWeight: 600,
-                        display: "flex",
-                        justifyContent: { md: "start", xs: "center" },
-                        alignItems: "center",
-                        cursor: "pointer",
-                        pt: { md: 9, xs: 2.5 },
-                      }}
+                  <Zoom cascade>
+                    <Link
+                      activeClass="active"
+                      to=""
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
                     >
-                      Metavault Trade
-                    </Typography>
-                  </Link>
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          fontFamily: "Inter",
+                          fontSize: {
+                            md: "2.2rem",
+                            sm: "1.3rem",
+                            xs: "1.7rem",
+                          },
+                          lineHeight: "26px",
+                          color: "white",
+                          fontWeight: 600,
+                          display: "flex",
+                          justifyContent: { md: "start", xs: "center" },
+                          alignItems: "center",
+                          cursor: "pointer",
+                          pt: { md: 9, xs: 2.5 },
+                        }}
+                      >
+                        Metavault Trade
+                      </Typography>
+                    </Link>
+                  </Zoom>
                 </Box>
               </Grid>
               <Grid item sm={4} xs={12}>
@@ -272,52 +296,58 @@ function Blog() {
                     pl: { md: 4.5, xs: 0 },
                   }}
                 >
-                  <Link
-                    activeClass="active"
-                    to=""
-                    spy={true}
-                    smooth={true}
-                    hashSpy={true}
-                  >
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        fontFamily: "Inter",
-                        fontSize: { md: "2.2rem", sm: "1.3rem", xs: "1.7rem" },
-                        lineHeight: "26px",
-                        color: "white",
-                        fontWeight: 600,
-                        display: "flex",
-                        justifyContent: { md: "start", xs: "center" },
+                  <Zoom cascade>
+                    <Link
+                      activeClass="active"
+                      to=""
+                      spy={true}
+                      smooth={true}
+                      hashSpy={true}
+                    >
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          fontFamily: "Inter",
+                          fontSize: {
+                            md: "2.2rem",
+                            sm: "1.3rem",
+                            xs: "1.7rem",
+                          },
+                          lineHeight: "26px",
+                          color: "white",
+                          fontWeight: 600,
+                          display: "flex",
+                          justifyContent: { md: "start", xs: "center" },
 
-                        alignItems: "center",
-                        cursor: "pointer",
-                        pt: { md: 9, xs: 4 },
-                      }}
-                    >
-                      Metavault Options
-                    </Typography>
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        fontFamily: "Inter",
-                        fontSize: "16px",
-                        lineHeight: "6px",
-                        color: "hsla(0,0%,100%,.7)",
-                        fontWeight: 400,
-                        display: "flex",
-                        justifyContent: {
-                          md: "start",
-                          sm: "center",
-                          xs: "center",
-                        },
-                        alignItems: "center",
-                        mt: 2,
-                      }}
-                    >
-                      common soon!
-                    </Typography>
-                  </Link>
+                          alignItems: "center",
+                          cursor: "pointer",
+                          pt: { md: 9, xs: 4 },
+                        }}
+                      >
+                        Metavault Options
+                      </Typography>
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          fontFamily: "Inter",
+                          fontSize: "16px",
+                          lineHeight: "6px",
+                          color: "hsla(0,0%,100%,.7)",
+                          fontWeight: 400,
+                          display: "flex",
+                          justifyContent: {
+                            md: "start",
+                            sm: "center",
+                            xs: "center",
+                          },
+                          alignItems: "center",
+                          mt: 2,
+                        }}
+                      >
+                        common soon!
+                      </Typography>
+                    </Link>
+                  </Zoom>
                 </Box>
               </Grid>
             </Grid>
