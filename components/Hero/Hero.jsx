@@ -25,7 +25,7 @@ function Hero() {
           justifyContent: "center",
           alignItems: "center",
           height: { md: "100vh" },
-          pt: { md: 16, xs: 10 },
+          pt: { md: 16, xs: 3 },
           pb: { md: "unset", xs: 12 },
         }}
       >
@@ -50,7 +50,7 @@ function Hero() {
             textAlign: "center",
             fontFamily: "Inter",
             lineHeight: "2rem",
-            fontSize: "1.2rem",
+            fontSize: {md:"1.2rem", xs:'15px'},
             fontWeight: 500,
             color: "white",
           }}
@@ -68,18 +68,19 @@ function Hero() {
           paddingY="1.2rem"
           fontSize="1.2rem"
         ></CustomButton>
-        <Typography
+        <Box
           sx={{
-            color: "white",
-            fontSize: { md: "1.3rem", xs: "1rem" },
-            fontFamily: "Inter",
-            mt: 3.5,
-            letterSpacing: "2px",
-            fontWeight: 100,
+            position: "relative",
+            width: { md: "180px", xs: "130px" },
+            height: { md: "180px", xs: "130px" },
           }}
         >
-          ethereum
-        </Typography>
+          <Image
+            src={"/svg/EtheriumIcon.svg"}
+            layout="fill"
+            objectFit="contain"
+          ></Image>
+        </Box>
       </Container>
     </Box>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
 import { Box, Container } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
@@ -9,10 +8,11 @@ function InvestAndGovern() {
     <Box
       sx={{
         width: "100%",
-        height: "100vh",
+        height: {md:"100vh", xs:'auto'},
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        pt:{md:0,xs:10}
       }}
     >
       <Container
@@ -33,7 +33,8 @@ function InvestAndGovern() {
             border: "1px solid white",
             borderRadius: "1.3rem",
             overflow: "hidden",
-            height: { md: "100%", xs: "auto" },
+            height: '100%',
+            mb:{md:0, xs:4}
           }}
         >
           {/* Left part */}

@@ -13,6 +13,7 @@ function TransparentRevenues() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        py:{md:0,xs:4}
       }}
     >
       <Container
@@ -22,7 +23,6 @@ function TransparentRevenues() {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: { md: "row", xs: "column" },
-          pb: 6,
         }}
       >
         {/* right */}
@@ -30,7 +30,7 @@ function TransparentRevenues() {
           id="TransparentRevenuesLeftBG"
           sx={{
             width: { md: "50%", xs: "100%" },
-            height: { sm: "600px" },
+            height: { sm: "590px" },
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -109,7 +109,7 @@ function TransparentRevenues() {
           }}
         >
           <Box sx={{ flexGrow: 1, width: "100%" }}>
-            <Grid container spacing={4}>
+            <Grid container spacing={{md:4,xs:2}}>
               {Cards.map((item, index) => {
                 return (
                   <Grid key={index} item xs={12} md={6}>
